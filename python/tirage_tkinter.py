@@ -7,7 +7,7 @@ file_user = open("utilisateur.txt", "r", encoding="utf-8")
 
 # FR: lit le fichier et enregistre le texte
 # EN: reads the file and saves the text
-tab_user = file_user.readlines()
+tab_user = file_user.readlines
 file_user.close()
 
 # FR: Fonction de défilement du texte
