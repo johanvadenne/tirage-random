@@ -14,6 +14,7 @@ print(texte_ascii)
 
 
 # FR: ouvre le fichier utilisateur.txt en lecture
+# EN: opens the utilisateur.txt file in read mode
 fichier_utilisateur = open("utilisateur.txt", "r+", encoding="utf-8")
 
 # FR: lit le fichier et enregistre les utilisateurs dans un tableau
