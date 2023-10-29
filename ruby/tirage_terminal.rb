@@ -27,8 +27,8 @@ while 1
         # EN: generates a random number
         utilisateur_random = rand(tab_utilisateur.length)
 
-        # FR: affiche l'utiilisateur
-        # EN: displays user
+        # FR: affiche l'utiilisateur et le supprime
+        # EN: displays user and deletes it
         puts tab_utilisateur.delete(tab_utilisateur[utilisateur_random])
 
     # FR: si 'STOP' sortir de la boucle

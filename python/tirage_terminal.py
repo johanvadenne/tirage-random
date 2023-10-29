@@ -19,7 +19,7 @@ fichier_utilisateur = open("utilisateur.txt", "r+", encoding="utf-8")
 
 # FR: lit le fichier et enregistre les utilisateurs dans un tableau
 # EN: opens user.txt file for reading
-tab_utilisateur = fichier_utilisateur.read().split("\n")
+tab_utilisateur = fichier_utilisateur.readlines()
 
 while 1:
     # FR: attend une réponse de l'utilisateur
@@ -33,13 +33,16 @@ while 1:
         # EN: if 'GO' do a draw
         utilisateur_random = randint(0, len(tab_utilisateur)-1)
 
-        # FR: affiche l'utiilisateur
-        # EN: displays user
-        print(tab_utilisateur[utilisateur_random])
+        # FR: affiche l'utiilisateur et le supprime
+        # EN: displays user and deletes it
+        print(tab_utilisateur.pop(utilisateur_random))
 
     # FR: si 'STOP' sortir de la boucle
     # EN: if 'STOP' exit the loop
     elif reponse == "STOP":
+        break
+    
+    if len(tab_utilisateur) == 0:
         break
 
 # FR: la politesse tout de même

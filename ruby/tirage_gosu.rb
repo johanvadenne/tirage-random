@@ -78,7 +78,7 @@ class Fenetre < Gosu::Window
       if @frame > 100
           @tirage = false
           @frame = 0
-          @tab_utilisateur.delete(@text_center)
+          @tab_utilisateur.delete(@text_center) # delete user
       end
     end
   end
