@@ -29,11 +29,17 @@ while 1
 
         # FR: affiche l'utiilisateur
         # EN: displays user
-        puts tab_utilisateur[utilisateur_random]
+        puts tab_utilisateur.delete(tab_utilisateur[utilisateur_random])
 
     # FR: si 'STOP' sortir de la boucle
     # EN: if 'STOP' exit the loop
     elsif reponse == "STOP"
+        break
+    end
+
+    # FR: sortir si il n'y a plus d'utilisateur
+    # EN: exit if no user left
+    if tab_utilisateur.length == 0
         break
     end
 end

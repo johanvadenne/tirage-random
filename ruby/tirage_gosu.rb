@@ -53,6 +53,13 @@ class Fenetre < Gosu::Window
     if @tirage
 
       @frame+=1
+
+      # FR: sortir si il n'y a plus d'utilisateur
+      # EN: exit if no user left
+      if @tab_utilisateur.length == 0
+        @text_center = "Tout le monde est passé!"
+        @tirage = false
+      end
       
       # FR: Toutes les 5 frames un nom s'affiche au hasard à l'écran
       # EN: Every 5 frames a name is randomly displayed on the screen
@@ -71,6 +78,7 @@ class Fenetre < Gosu::Window
       if @frame > 100
           @tirage = false
           @frame = 0
+          @tab_utilisateur.delete(@text_center)
       end
     end
   end
