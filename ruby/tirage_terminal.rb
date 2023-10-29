@@ -36,7 +36,7 @@ while 1
     elsif reponse == "STOP"
         break
     end
-end*
+end
 
 # FR: la politesse tout de même
 # EN: politeness all the same
