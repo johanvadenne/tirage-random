@@ -10,12 +10,9 @@ texte_ascii = fichier_ascii.read
 # EN: displays ascii text for presentation
 puts texte_ascii
 
-# FR: ouvre le fichier utilisateur.txt en lecture
-# EN: opens the utilisateur.txt file in read mode
+# FR: ouvre et enregistre les utilisateurs dans un tableau
+# EN: opens and registers users in a table
 tab_utilisateur = open("utilisateur.txt").map(&:chomp)
-
-# FR: lit le fichier et enregistre les utilisateurs dans un tableau
-# EN: opens user.txt file for reading
 
 while 1
     # FR: attend une réponse de l'utilisateur
@@ -24,10 +21,10 @@ while 1
     reponse = gets.chomp
 
     # FR: si 'GO' faire un tirage
-    # EN: waits for user response
+    # EN: if 'GO' do a draw
     if reponse == "GO"
-        # génère un nombre aléatoire
-        # EN: if 'GO' do a draw
+        # FR: génère un nombre aléatoire
+        # EN: generates a random number
         utilisateur_random = rand(tab_utilisateur.length)
 
         # FR: affiche l'utiilisateur
@@ -39,7 +36,8 @@ while 1
     elsif reponse == "STOP"
         break
     end
-end
+end*
+
 # FR: la politesse tout de même
 # EN: politeness all the same
 puts "merci, et à bientôt!"
