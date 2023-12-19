@@ -5,7 +5,7 @@ require 'gosu'
 class Fenetre < Gosu::Window
   def initialize
     super(800, 600) # window sizing
-    self.caption = 'Bouton Gosu' # window title
+    self.caption = 'Tirage' # window title
 
     # init
     @tirage = false
